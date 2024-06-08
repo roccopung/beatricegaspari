@@ -1,0 +1,66 @@
+/* On top of Normalize.css */
+* {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  font: inherit;
+}
+
+button,
+select,
+input[type='submit'],
+input[type='file'] {
+  cursor: pointer;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  appearance: none;
+  padding: initial;
+  background: inherit;
+  border: initial;
+  color: inherit;
+  text-transform: inherit;
+  letter-spacing: inherit;
+}
+
+::placeholder {
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+  padding: initial;
+  margin: initial;
+}
+
+img {
+  max-width: 100%;
+}

@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "dev-https": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert certs/localhost.pem --ssl-key certs/localhost-key.pem",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "preview-https": "NITRO_SSL_CERT=$(cat certs/localhost.pem) NITRO_SSL_KEY=$(cat certs/localhost-key.pem) node .output/server/index.mjs",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@unocss/nuxt": "^0.58.5",
+    "@vueuse/core": "^10.9.0",
+    "@vueuse/nuxt": "10.9.0",
+    "@vueuse/router": "^10.9.0",
+    "hls.js": "^1.5.7",
+    "modern-normalize": "^2.0.0",
+    "nuxt": "^3.10.3",
+    "postcss": "^8.4.35",
+    "postcss-nested": "^6.0.1",
+    "postcss-preset-env": "^9.5.1",
+    "swiper": "^11.0.7",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}

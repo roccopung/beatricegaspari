@@ -1,0 +1,46 @@
+.lock-vp {
+	position: fixed;
+	overflow: hidden;
+}
+
+.overlap {
+	display: grid;
+	> * {
+		grid-area: 1 / 1;
+	}
+}
+
+.centerize {
+	display: grid;
+	place-content: center;
+	> * {
+		grid-area: 1 / 1;
+	}
+}
+
+.ratio-container {
+	--r-width: 1;
+	--r-height: 1;
+
+	height: 0;
+	overflow: hidden;
+	padding-top: calc(var(--r-height) / var(--r-width) * 100%);
+	position: relative;
+
+	.ratio {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.ratio {
+	--r-width: 1;
+	--r-height: 1;
+	--r-fit: cover;
+
+	aspect-ratio: var(--r-width) / var(--r-height);
+	object-fit: var(--r-fit);
+}
