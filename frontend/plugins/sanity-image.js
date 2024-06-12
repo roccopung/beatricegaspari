@@ -9,6 +9,6 @@ export default defineNuxtPlugin(() => {
   }
 
   return {
-    provide: { urlFor },
+    provide: { urlFor }
   }
 })
