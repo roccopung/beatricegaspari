@@ -22,7 +22,7 @@ export default defineConfig({
         origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
         previewMode: {
           enable: '/preview/enable',
-          disable: '/preview/disable',
+          disable: '/preview/disable'
         },
       },
     }),
