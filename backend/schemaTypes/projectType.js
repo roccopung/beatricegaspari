@@ -58,6 +58,31 @@ export const projectType = defineType({
       of: [
         {
           type: 'block',
+          marks: {
+            decorators: [
+              {title: 'Strong', value: 'strong'},
+              {title: 'Emphasis', value: 'em'},
+              {title: 'Code', value: 'code'}
+            ],
+            annotations: [
+              {
+                name: 'internalLink',
+                type: 'object',
+                title: 'Internal link',
+                fields: [
+                  {
+                    name: 'reference',
+                    type: 'reference',
+                    title: 'Reference',
+                    to: [{type: 'project'}]
+                  },
+                ],
+              },
+            ],
+          },
+        },
+        {
+          type: 'image',
         },
       ],
     }),

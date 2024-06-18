@@ -15,6 +15,9 @@ export const textType = defineType({
         {
           type: 'block',
         },
+        {
+          type: 'image'
+        }
       ],
     }),
   ],
