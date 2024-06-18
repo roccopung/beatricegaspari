@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import {defineField, defineType, defineArrayMember} from 'sanity'
 import {SparklesIcon} from '@sanity/icons'
 
 export const projectType = defineType({
@@ -27,7 +27,7 @@ export const projectType = defineType({
     defineField({
       name: 'coverImage',
       type: 'image',
-      group: ['details'],
+      group: 'details',
     }),
     defineField({
       name: 'year',
@@ -66,6 +66,36 @@ export const projectType = defineType({
       title: 'Gallery',
       type: 'gallery',
     }),
+    defineField({
+      name: 'pageBuilder',
+      type: 'array',
+      title: 'Page builder',
+      of: [
+        defineArrayMember({
+          name: 'gallery',
+          type: 'gallery',
+        }),
+        defineArrayMember({
+          name: 'image',
+          type: 'image',
+          fields: [
+            defineField({
+              name: 'caption',
+              title: 'Caption',
+              type: 'string',
+            }),
+          ],
+        }),
+        defineArrayMember({
+          name: 'video',
+          type: 'video',
+        }),
+        defineArrayMember({
+          name: 'textType',
+          type: 'textType',
+        }),
+      ],
+    }),
     {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
     {name: 'seoKeywords', title: 'Keywords', type: 'string', group: 'seo'},
     {name: 'seoImage', title: 'Image', type: 'image', group: 'seo'},
@@ -76,7 +106,7 @@ export const projectType = defineType({
       group: 'seo',
       options: {
         source: 'title',
-      }
+      },
     },
     {
       name: 'excerpt',
