@@ -68,8 +68,16 @@ export const projectType = defineType({
     }),
     {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
     {name: 'seoKeywords', title: 'Keywords', type: 'string', group: 'seo'},
-    {name: 'seoSlug', title: 'Slug', type: 'slug', group: 'seo'},
     {name: 'seoImage', title: 'Image', type: 'image', group: 'seo'},
+    {
+      name: 'seoSlug',
+      title: 'Slug',
+      type: 'slug',
+      group: 'seo',
+      options: {
+        source: 'title',
+      }
+    },
     {
       name: 'excerpt',
       title: 'Excerpt',
