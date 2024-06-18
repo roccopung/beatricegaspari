@@ -74,7 +74,7 @@ export const projectType = defineType({
                     name: 'reference',
                     type: 'reference',
                     title: 'Reference',
-                    to: [{type: 'project'}]
+                    to: [{type: 'project'}],
                   },
                 ],
               },
