@@ -1,1 +1,0 @@
-export { default } from "file:///Users/roccopunghellini/Sites/beatricegaspari.com/frontend/node_modules/.pnpm/@nuxt+vite-builder@3.10.3_@types+node@20.11.25_rollup@4.12.1_terser@5.29.1_vue@3.4.21/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
