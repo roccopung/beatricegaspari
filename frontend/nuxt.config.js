@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/index.css"],
-  modules: ["@vueuse/nuxt", "@nuxtjs/tailwindcss", "@nuxtjs/sanity"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
@@ -27,17 +27,17 @@ export default defineNuxtConfig({
       stega: true,
     },
   },
-  tailwindcss: {
-    // cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
-    // cssPath: false,
-    // configPath: "tailwind.config",
-    exposeConfig: false,
-    // exposeConfig: {
-    //   level: 2,
-    // },
-    config: {},
-    viewer: true,
-  },
+  // tailwindcss: {
+  //   // cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
+  //   // cssPath: false,
+  //   // configPath: "tailwind.config",
+  //   exposeConfig: false,
+  //   // exposeConfig: {
+  //   //   level: 2,
+  //   // },
+  //   config: {},
+  //   viewer: true,
+  // },
   postcss: {
     plugins: {
       "./postcss-get-tokens": {
@@ -50,6 +50,8 @@ export default defineNuxtConfig({
           "nesting-rules": false,
         },
       },
+      tailwindcss: {},
+      autoprefixer: {},
     },
   },
   imports: {

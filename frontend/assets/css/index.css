@@ -5,3 +5,7 @@
 @import "@/assets/css/root";
 @import "@/assets/css/typography";
 @import "@/assets/css/main";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
