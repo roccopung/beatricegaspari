@@ -1,6 +1,6 @@
 import {defineField, defineType, defineArrayMember} from 'sanity'
 import {SparklesIcon} from '@sanity/icons'
-import {orderRankField, orderRankOrdering} from '@sanity/orderable-document-list'
+import {orderRankField} from '@sanity/orderable-document-list'
 
 export const projectType = defineType({
   name: 'project',

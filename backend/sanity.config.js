@@ -13,6 +13,7 @@ export default defineConfig({
   dataset: 'production',
 
   plugins: [
+    vercelDeployTool(),
     structureTool({
       structure,
     }),
