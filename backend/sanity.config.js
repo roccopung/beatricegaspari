@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 import {presentationTool} from 'sanity/presentation'
+import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
 export default defineConfig({
   name: 'default',
@@ -23,7 +24,7 @@ export default defineConfig({
         origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
         previewMode: {
           enable: '/preview/enable',
-          disable: '/preview/disable'
+          disable: '/preview/disable',
         },
       },
     }),
