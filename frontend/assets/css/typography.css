@@ -1,23 +1,43 @@
 .typo {
-	&--m {
-		font-family: "Helvetica", "Arial", sans-serif;
-		font-weight: 450;
-		font-size: 24px;
-		line-height: 26px;
-		@media (--m) {
+	&--logo {
+		font-family: "Arial Narrow", "Arial", sans-serif;
+		font-weight: 400;
+		font-size: 9px;
+		line-height: 1.15;
+		/* @media (--m) {
 			font-size: 32px;
 			line-height: 34px;
-		}
+		} */
+	}
+	&--m {
+		font-family: "Arial Narrow", "Arial", sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		line-height: 26px;
+		/* @media (--m) {
+			font-size: 32px;
+			line-height: 34px;
+		} */
 	}
 	&--l {
-		font-family: "Helvetica", "Arial", sans-serif;
-		font-weight: 450;
-		font-size: 24px;
-		line-height: 26px;
-		@media (--m) {
+		font-family: "Piscolabis Regular", "Arial Narrow", "Arial", sans-serif;
+		font-weight: 400;
+		font-size: 48px;
+		line-height: 1.15;
+		/* @media (--m) {
 			font-size: 32px;
 			line-height: 34px;
-		}
+		} */
+	}
+	&--xl {
+		font-family: "Arial Narrow", "Arial", sans-serif;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 1.15;
+		/* @media (--m) {
+			font-size: 32px;
+			line-height: 34px;
+		} */
 	}
 }
 

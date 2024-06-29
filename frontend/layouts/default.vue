@@ -10,7 +10,7 @@
 	</main>
 </template>
 
-<style lang="postcss" scoped>
+<style scoped>
 main {
 	display: grid;
 	grid-template-rows: auto 1fr auto;

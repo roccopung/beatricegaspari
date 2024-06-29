@@ -1,17 +1,8 @@
 @font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-Medium.woff") format("woff"),
-		url("/fonts/Matter-Medium.woff2") format("woff2");
-	font-weight: 500;
-	font-style: normal;
-	font-stretch: normal;
-}
-
-@font-face {
-	font-family: "Matter";
-	src: url("/fonts/Matter-MediumItalic.woff") format("woff"),
-		url("/fonts/Matter-MediumItalic.woff2") format("woff2");
-	font-weight: 500;
-	font-style: italic;
+	font-family: "Piscolabis Regular";
+	src: url("/fonts/Piscolabis-Regular.woff") format("woff"),
+		url("/fonts/Piscolabis-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: regular;
 	font-stretch: normal;
 }
