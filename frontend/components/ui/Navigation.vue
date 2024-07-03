@@ -1,9 +1,11 @@
 <script setup>
 import { inject } from 'vue';
-import { onClickOutside } from '@vueuse/core'
 import { PortableText } from '@portabletext/vue';
 
 const navigation = inject('navigation');
+
+const navigationEl = ref(null);
+const { width } = useWindowSize();
 
 const aboutDescription = computed(() => navigation.value?.about?.aboutDescription || [])
 
@@ -46,10 +48,24 @@ const toggleDropdownContact = () => {
     dropdownContact.value = !dropdownContact.value
 }
 
+
+const disabled = ref(false);
+const initialValue = ref(null);
+
+const { style } = useDraggable(navigationEl, {
+    initialValue: { x: '', y: '' },
+    preventDefault: true,
+    disabled,
+})
+
+watchEffect(() => {
+    disabled.value = width.value < 720;
+});
+
 </script>
 <template>
-    <div ref="dropdownRef" class="nav-container relative w-2/3">
-        <nav class="w-full bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-grab">
+    <div :style="style" ref="dropdownRef" class="fixed w-full md:w-2/3 px-2 top-8 md:top-[1.75rem] md:right-4 md:px-0">
+        <nav ref="navigationEl" class="bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-grab">
             <ul class="w-full flex flex-row justify-between items-center h-full">
                 <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
                     :class="dropdownPortfolio ? 'bg-yellow-accent' : ''" @click="toggleDropdownPortfolio"
@@ -70,16 +86,21 @@ const toggleDropdownContact = () => {
                     v-html="category.title + `(${category.count})`" :to="`/category/${category.slug}`" />
             </div>
         </ul>
-        <div class="about_description-container bg-orange-100 absolute w-full min-h-fit max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
+        <div class="about_description-container bg-orange-200 w-full min-h-fit md:max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownAbout">
             <PortableText :value="aboutDescription" />
         </div>
-        <div class="contact-container bg-orange-100 absolute w-full h-fit typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
+        <div class="contact-container bg-orange-200 w-full h-fit typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownContact">
             <ul>
                 <li class="contacts lowercase" v-for="contact in navigation.about.contacts">
-                    <a v-if="contact.value.includes('@')" :href="`mailto:${contact.value}`" target="_blank" v-html="contact.label" />
-                    <a v-else :href="contact.value" target="_blank" v-html="contact.label" />
+                    <a class="flex gap-x-6 items-baseline" v-if="contact.value.includes('@')"
+                        :href="`mailto:${contact.value}`" target="_blank">{{ contact.label }}
+                        <span class="typo--m" v-html="contact.type" /></a>
+
+                    <a class="flex gap-x-6 items-baseline" v-else :href="contact.value" target="_blank">{{ contact.label
+                        }}
+                        <span class="typo--m" v-html="contact.type" /></a>
                 </li>
             </ul>
         </div>
@@ -101,8 +122,9 @@ const toggleDropdownContact = () => {
 
 .contacts {
     transition: 0.3s;
+
     &:hover {
-        opacity: 0.65;
+        opacity: 0.5;
     }
 }
 </style>
