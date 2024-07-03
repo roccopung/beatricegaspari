@@ -31,7 +31,8 @@ export const aboutType = defineType({
             type: 'object',
             name: 'contact',
             fields: [
-              {type: 'string', name: 'label', title: 'Label (e.g. Email, Phone)'},
+              {type: 'string', name: 'type', title: 'Type (e.g. Email, Phone)'},
+              {type: 'string', name: 'label', title: 'Label (e.g. @nickname)'},
               {type: 'string', name: 'value', title: 'Value (e.g. beatricegaspari@gmail.com)'},
             ]
           })

@@ -7,12 +7,6 @@ const navigation = inject('navigation');
 
 const aboutDescription = computed(() => navigation.value?.about?.aboutDescription || [])
 
-const dropdownStates = ref({
-  portfolio: false,
-  about: false,
-  contact: false,
-});
-
 const dropdownPortfolio = ref(false)
 const dropdownAbout = ref(false)
 const dropdownContact = ref(false)
@@ -76,7 +70,7 @@ const toggleDropdownContact = () => {
                     v-html="category.title + `(${category.count})`" :to="`/category/${category.slug}`" />
             </div>
         </ul>
-        <div class="about_description-container bg-orange-100 absolute w-full h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
+        <div class="about_description-container bg-orange-100 absolute w-full min-h-fit max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownAbout">
             <PortableText :value="aboutDescription" />
         </div>
