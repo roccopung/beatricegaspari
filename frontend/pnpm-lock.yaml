@@ -11,6 +11,9 @@ importers:
       '@nuxtjs/sanity':
         specifier: ^1.11.3
         version: 1.11.4(magicast@0.3.4)(rollup@4.18.0)
+      '@portabletext/vue':
+        specifier: ^1.0.11
+        version: 1.0.11(vue@3.4.30)
       '@sanity/image-url':
         specifier: ^1.0.2
         version: 1.0.2
@@ -1122,9 +1125,18 @@ packages:
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
 
+  '@portabletext/toolkit@2.0.15':
+    resolution: {integrity: sha512-KRNEUAd6eOxE9y591qC0sE24ZG2q27OHXe0dsPclj4IoEzf8aEuDcHR64wfFtB0aHq9Wdx3pIinmhZZcl35/vg==}
+    engines: {node: ^14.13.1 || >=16.0.0}
+
   '@portabletext/types@2.0.13':
     resolution: {integrity: sha512-5xk5MSyQU9CrDho3Rsguj38jhijhD36Mk8S6mZo3huv6PM+t4M/5kJN2KFIxgvt4ONpvOEs1pVIZAV0cL0Vi+Q==}
     engines: {node: ^14.13.1 || >=16.0.0 || >=18.0.0}
+
+  '@portabletext/vue@1.0.11':
+    resolution: {integrity: sha512-/KclMZwPOIinspuuTwidAJJ+shShNOJ2s9C8EKzfOVIIOHpyL9v0UC2TH0G8WSoSXxN7ob6DdRF6LrPyCm/QdQ==}
+    peerDependencies:
+      vue: ^3.3.4
 
   '@protobufjs/aspromise@1.1.2':
     resolution: {integrity: sha512-j+gKExEuLmKwvz3OgROXtrJ2UG2x8Ch2YZUxahh+s1F2HZ+wAceUNLkvy6zKCPVRkU++ZWQrdxsUeQXmcg4uoQ==}
@@ -5557,7 +5569,17 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
+  '@portabletext/toolkit@2.0.15':
+    dependencies:
+      '@portabletext/types': 2.0.13
+
   '@portabletext/types@2.0.13': {}
+
+  '@portabletext/vue@1.0.11(vue@3.4.30)':
+    dependencies:
+      '@portabletext/toolkit': 2.0.15
+      '@portabletext/types': 2.0.13
+      vue: 3.4.30
 
   '@protobufjs/aspromise@1.1.2': {}
 

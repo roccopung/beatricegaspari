@@ -1,23 +1,36 @@
 html {
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-	font-size: 16px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  font-size: 16px;
 }
 
 body {
-	overflow-x: hidden;
-	background-color: var(--color-gray-100);
-	color: var(--color-black);
+  overflow-x: hidden;
+  background-color: var(--color-gray-100);
+  color: var(--color-black);
+  min-height: 100dvh;
+  width: 100%;
 }
 
 img,
 svg {
-	display: block;
+  display: block;
 }
 
 svg {
-	overflow: visible;
+  overflow: visible;
+}
+
+/* a:hover,
+button:hover {
+  background-color: var(--color-yellow-accent);
+} */
+
+a {
+  color: inherit;
+  background-color: inherit;
+  text-decoration: none;
 }
