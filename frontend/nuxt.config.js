@@ -25,7 +25,7 @@ export default defineNuxtConfig({
     visualEditing: {
       studioUrl: process.env.NUXT_SANITY_STUDIO_URL || "http://localhost:3333",
       token: process.env.NUXT_SANITY_API_READ_TOKEN,
-      // stega: true,
+      stega: true,
     },
   },
   // tailwindcss: {
