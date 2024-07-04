@@ -6,6 +6,11 @@ import {structure} from './structure'
 import {presentationTool} from 'sanity/presentation'
 import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
+const SANITY_STUDIO_PREVIEW_URL = (
+	process.env.SANITY_STUDIO_PREVIEW_URL
+	|| 'http://localhost:3000'
+)
+
 export default defineConfig({
   name: 'default',
   title: 'beatricegaspari.com',
@@ -20,11 +25,7 @@ export default defineConfig({
     visionTool(),
     presentationTool({
       previewUrl: {
-        origin: process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000',
-        previewMode: {
-          enable: '/preview/enable',
-          disable: '/preview/disable',
-        },
+        previewUrl: SANITY_STUDIO_PREVIEW_URL,
       },
     }),
     vercelDeployTool(),
