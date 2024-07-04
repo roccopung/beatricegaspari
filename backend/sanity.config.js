@@ -6,17 +6,16 @@ import {structure} from './structure'
 import {presentationTool} from 'sanity/presentation'
 import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
-const SANITY_STUDIO_PREVIEW_URL = (
-	process.env.SANITY_STUDIO_PREVIEW_URL
-	|| 'http://localhost:3000'
-)
+export const sanity_preview_url = (
+  process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000'
+);
 
 export default defineConfig({
   name: 'default',
   title: 'beatricegaspari.com',
 
-  projectId: 'rg0ypv3u',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID,
+  dataset: process.env.SANITY_STUDIO_DATASET,
 
   plugins: [
     structureTool({
@@ -25,7 +24,7 @@ export default defineConfig({
     visionTool(),
     presentationTool({
       previewUrl: {
-        previewUrl: SANITY_STUDIO_PREVIEW_URL,
+        origin: sanity_preview_url,
       },
     }),
     vercelDeployTool(),
@@ -34,4 +33,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-})
+});

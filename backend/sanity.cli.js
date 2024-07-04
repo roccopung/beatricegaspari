@@ -1,8 +1,9 @@
+import * as dotenv from 'dotenv'
 import {defineCliConfig} from 'sanity/cli'
 
-export default defineCliConfig({
-  api: {
-    projectId: 'rg0ypv3u',
-    dataset: 'production'
-  }
-})
+dotenv.config()
+
+const projectId = process.env.SANITY_STUDIO_PROJECT_ID
+const dataset = process.env.SANITY_STUDIO_DATASET
+
+export default defineCliConfig({api: {projectId, dataset}})
