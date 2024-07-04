@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  ssr: true,
+  // ssr: true,
   app: {
     head: {
       meta: [
