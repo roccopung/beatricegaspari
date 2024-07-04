@@ -3,8 +3,8 @@ import { inject } from 'vue';
 import { PortableText } from '@portabletext/vue';
 
 const navigation = inject('navigation');
-
 const navigationEl = ref(null);
+
 const { width } = useWindowSize();
 
 const aboutDescription = computed(() => navigation.value?.about?.aboutDescription || [])
@@ -12,7 +12,6 @@ const aboutDescription = computed(() => navigation.value?.about?.aboutDescriptio
 const dropdownPortfolio = ref(false)
 const dropdownAbout = ref(false)
 const dropdownContact = ref(false)
-
 const dropdownRef = ref(null)
 
 onClickOutside(
@@ -50,8 +49,6 @@ const toggleDropdownContact = () => {
 
 
 const disabled = ref(false);
-const initialValue = ref(null);
-
 const { style } = useDraggable(navigationEl, {
     initialValue: { x: '', y: '' },
     preventDefault: true,

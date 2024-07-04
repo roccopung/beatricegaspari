@@ -11,7 +11,7 @@ provide('navigation', navigation);
 </script>
 
 <template>
-	<main class="typo--m ">
+	<main class="typo--m font-body">
 		<UiHeader />
 		<div>
 			<slot />

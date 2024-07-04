@@ -14,7 +14,7 @@ watch(width, (oldVal, newVal) => {
 </script>
 
 <template>
-	<div class="w-full flex flex-column flex-wrap items-center justify-center pt-0 px-2
+	<div class="fixed z-10 w-full flex flex-column flex-wrap items-center justify-center pt-0 px-2
 	md:flex-row md:justify-between md:pt-7 md:px-4">
 		<UiLogo />
 		<UiNavigation :key="navigationKey" />
