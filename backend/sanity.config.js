@@ -21,7 +21,7 @@ export default defineConfig({
     }),
     visionTool(),
     presentationTool({
-      origin: sanity_preview_url || 'http://localhost:3000',
+      previewUrl: sanity_preview_url || 'http://localhost:3000',
     }),
     vercelDeployTool(),
   ],
