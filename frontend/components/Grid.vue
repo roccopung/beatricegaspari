@@ -1,19 +1,11 @@
 <script setup>
 import { Image } from "@unpic/vue";
-import { getImageDimensions } from '@sanity/asset-utils'
-
 
 const props = defineProps({
     projects: {
         type: Array,
     }
 });
-
-// const isHovered = ref([false]);
-
-// const toggleHover = (index) => {
-//     isHovered[index] = !isHovered[index];
-// };
 
 const hoveredProjectId = ref(null);
 
@@ -22,7 +14,7 @@ const hoveredProjectId = ref(null);
     <div class="grid-container w-full p-2 pt-32 md:p-4 md:pt-32">
         <div class="grid gap-1 grid-cols-2 md:grid-cols-3">
             <NuxtLink v-for="project in projects" :key="project._id" @mouseover="hoveredProjectId = project._id"
-                @mouseleave="hoveredProjectId = null" class="grid-item w-fit h-fit hover:rotate-1 transition" :to="`/project/${project.slug}`">
+                @mouseleave="hoveredProjectId = null" class="grid-item w-fit h-fit hover:rotate-1 hover:bg-yellow-dark transition" :to="`/project/${project.slug}`">
                 <Image class="project-image" :class="{ 'mix-blend-multiply': hoveredProjectId === project._id }"
                     :src="$urlFor(project.cover).quality(50).format('avif').url()" layout="constrained"
                     :width="project.coverWidth" :height="project.coverHeight" alt="A lovely bath" />
@@ -34,12 +26,4 @@ const hoveredProjectId = ref(null);
         </div>
     </div>
 </template>
-<style scoped>
-.grid-item {
-    &:hover {
-        background-color: var(--color-yellow-dark);
-        transform: rotate(90);
-    }
-}
-
-</style>
+<style scoped></style>

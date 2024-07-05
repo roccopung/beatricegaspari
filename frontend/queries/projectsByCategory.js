@@ -1,7 +1,8 @@
-export async function queryProjectsList() {
-  const { data } = await useSanityQuery(groq`
-    *[_type == "project"] | order(orderRank) {
-       _id,
+export async function queryProjectsByCategory(inputCategory) {
+  const { data } = await useSanityQuery(
+    groq`
+     *[_type == 'project' && $projectCategory in category[]->slug.current] | order(orderRank) {
+        _id,
         title, 
         year, 
         "cover": coverImage.asset->url,
@@ -13,9 +14,13 @@ export async function queryProjectsList() {
           title
         }, 
         "slug": slug.current,
-      }
-    `);
-
+        }
+      `,
+    {
+      projectCategory: inputCategory,
+    }
+  );
   const response = data || null;
   return { response };
+
 }

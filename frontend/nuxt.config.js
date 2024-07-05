@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-  // ssr: true,
   app: {
     head: {
       meta: [
@@ -10,35 +9,24 @@ export default defineNuxtConfig({
       ],
     },
   },
-  runtimeConfig: {
-    public: {
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+  //   },
+  // },
   css: ["@/assets/css/index.css"],
   modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
-    useCdn: true, // `false` if you want to ensure fresh data
+    useCdn: false,
     apiVersion: process.env.NUXT_SANITY_API_VERSION || "2024-03-15",
-    visualEditing: {
-      studioUrl: process.env.NUXT_SANITY_STUDIO_URL || "http://localhost:3333",
-      token: process.env.NUXT_SANITY_API_READ_TOKEN,
-      stega: true,
-    },
+    // visualEditing: {
+    //   studioUrl: process.env.NUXT_SANITY_STUDIO_URL || "http://localhost:3333",
+    //   token: process.env.NUXT_SANITY_API_READ_TOKEN,
+    //   stega: true,
+    // },
   },
-  // tailwindcss: {
-  //   // cssPath: ['~/assets/css/tailwind.css', { injectPosition: "first" }],
-  //   // cssPath: false,
-  //   // configPath: "tailwind.config",
-  //   exposeConfig: false,
-  //   // exposeConfig: {
-  //   //   level: 2,
-  //   // },
-  //   config: {},
-  //   viewer: true,
-  // },
   postcss: {
     plugins: {
       "./postcss-get-tokens": {
