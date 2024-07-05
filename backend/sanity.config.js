@@ -23,10 +23,10 @@ export default defineConfig({
     presentationTool({
       previewUrl: {
         origin:  sanity_preview_url ,
-        previewMode: {
-          enable: '/preview/enable',
-          disable: '/preview/disable',
-        },
+        // previewMode: {
+        //   enable: '/preview/enable',
+        //   disable: '/preview/disable',
+        // },
       },
     }),
     vercelDeployTool(),
