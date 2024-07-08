@@ -54,6 +54,7 @@ export const galleryType = defineType({
     preview: {
       select: {
         images: 'images',
+        // image: 'images.0',
       },
       prepare(selection) {
         const { images } = selection;
