@@ -11,7 +11,6 @@ body {
   overflow-x: hidden;
   background-color: var(--color-gray-100);
   color: var(--color-black);
-  min-height: 100dvh;
   width: 100%;
 }
 

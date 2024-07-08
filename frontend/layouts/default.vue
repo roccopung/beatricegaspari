@@ -11,7 +11,7 @@ provide('navigation', navigation);
 </script>
 
 <template>
-	<main class="typo--m font-body">
+	<main class="relative typo--m font-body">
 		<UiHeader />
 		<div>
 			<slot />
@@ -24,5 +24,6 @@ provide('navigation', navigation);
 main {
 	display: grid;
 	grid-template-rows: auto 1fr auto;
+	height: calc(100svh - 1rem);
 }
 </style>

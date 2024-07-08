@@ -77,8 +77,11 @@ watchEffect(() => {
             </ul>
         </nav>
         <ul v-if="dropdownPortfolio">
+            <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
+                hover:bg-yellow-accent active:bg-yellow-accent" 
+                v-html="'All' + `(${navigation.all})`" to="/" />
             <div v-for="category in navigation.categories">
-                <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 bg-opacity-35 cursor-pointer
+                <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
                 hover:bg-yellow-accent active:bg-yellow-accent" v-if="category.count > 0" :key="category.id"
                     v-html="category.title + `(${category.count})`" :to="`/category/${category.slug}`" />
             </div>

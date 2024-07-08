@@ -1,6 +1,8 @@
 export async function queryNavigation() {
   const { data } = await useSanityQuery(groq`
     {
+
+      "all": count(*[_type == "project"]),
       
       "categories": *[_type == "category"] {
         title,

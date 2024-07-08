@@ -54,15 +54,14 @@ export const galleryType = defineType({
     preview: {
       select: {
         images: 'images',
-        image: 'images.0',
       },
       prepare(selection) {
-        const { images, image } = selection;
+        const { images } = selection;
   
         return {
           title: `Gallery block of ${Object.keys(images).length} images`,
-          subtitle: `Alt text: ${image.alt}`,
-          media: image,
+          // subtitle: `Alt text: ${image.alt}`,
+          // media: image,
         };
       },
     },
