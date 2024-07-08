@@ -11,42 +11,38 @@ export async function projectQuery(inputSlug) {
         title,
         year,
         client,
-        collaborators,
-        url,
-        directUrl,
-        video,
-        gallery[] {
-          images[] {
-              'itemUrl': asset->url,
-              crop,
-              hotspot
-          },
-        },
+        technique,
         category[] -> {
           _id,
           title
         },
-        'imageUrl': cover.asset->url,
-        roles[] -> {
-          _id,
-          title
-        },
-        summary,
-        tech,
         description,
+        gallery[] {
+          images[] {
+              "url": asset->url,
+              "width": asset->metadata.dimensions.width,
+              "height": asset->metadata.dimensions.height,
+              crop,
+              hotspot
+          },
+        },
         pageBuilder[],
-          'next':  *[_type == 'project' && orderRank > ^.orderRank] | order(orderRank asc)[0] {
+        'next':  *[_type == 'project' && orderRank > ^.orderRank] | order(orderRank asc)[0] {
           _id,
             'slug' : slug.current,
           title,
           year,
         },
-          'prev':  *[_type == 'project' && orderRank < ^.orderRank] | order(orderRank desc)[0] {
+        'prev':  *[_type == 'project' && orderRank < ^.orderRank] | order(orderRank desc)[0] {
           _id,
           'slug' : slug.current,
-        title,
-        year,
-        }
+          year,
+        },
+        seoSlug,
+        seoTitle,
+        seoKeywords,
+        seoImage,
+        seoExcerpt,
       }
     `,
     {
