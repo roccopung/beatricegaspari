@@ -2,11 +2,32 @@
 const props = defineProps({
   error: Object,
 })
+
+const route = useRoute();
+
+const goBack = () => {
+  const router = useRouter();
+  router.push('/');
+}
+
 </script>
 
 <template>
-  <NuxtLayout>
-    <div v-html="`Error: ${error.statusCode}`" /> 
-    <pre style="font-size: 10px; line-height: 1;" v-html="JSON.stringify(error)"></pre>
-  </NuxtLayout>
+  <div class="container typo--m">
+    <h2>{{ error.statusCode }}</h2>
+    <div>page not found: {{ route.fullPath }}</div>
+    <button @click="goBack">Go back to site</button>
+  </div>
 </template>
+
+<style scoped lang="scss">
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-grey-100);
+}
+</style>

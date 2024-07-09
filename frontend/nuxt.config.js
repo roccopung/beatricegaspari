@@ -11,11 +11,11 @@ export default defineNuxtConfig({
     },
   },
 
-  // runtimeConfig: {
-  //   public: {
-  //     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
-  //   },
-  // },
+  runtimeConfig: {
+    public: {
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+    },
+  },
   css: ["@/assets/css/index.css"],
 
   modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],

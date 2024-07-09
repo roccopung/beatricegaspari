@@ -1,5 +1,15 @@
-<script setup lang="ts">
-const route = useRoute()
+<script setup>
+const runtimeConfig = useRuntimeConfig();
+
+useHead({
+  title: 'Beatrice Gaspari Illustration',
+  htmlAttrs: {
+    lang: 'en-gb'
+  },
+  link: [
+    { rel: 'canonical', href: runtimeConfig?.public?.FRONT_END_URL },
+  ]
+})
 // const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
 </script>
 <template>
