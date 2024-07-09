@@ -20,7 +20,7 @@ const goBack = () => {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .container {
   display: flex;
   flex-direction: column;
