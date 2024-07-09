@@ -50,7 +50,7 @@ onUnmounted(() => {
 });
 </script>
 <template>
-    <div ref="swiperEl" class="swiper">
+    <div v-if=(props.data) ref="swiperEl" class="swiper">
         <div v-if=(props.data) class="swiper-wrapper" :class="inline ? 'inline' : 'stacked'">
             <div class="swiper-slide h-full w-auto" v-for="(image, i) in props.data">
                 <Image :src="$urlFor(image.url).quality(85).format('webp').url()" :key="i" layout="constrained"
@@ -59,7 +59,7 @@ onUnmounted(() => {
         </div>
         <div v-else class="swiper-slide"></div>
     </div>
-    <div ref="paginationEl" class="swiper-pagination typo--s"></div>
+    <div v-if="props.data" ref="paginationEl" class="swiper-pagination typo--s"></div>
 </template>
 <style scoped>
 .swiper {

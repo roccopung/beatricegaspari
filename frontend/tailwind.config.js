@@ -14,6 +14,8 @@ module.exports = {
       'white': 'rgb(255, 255, 255)',
       'gray-100': 'rgb(244, 244, 244)',
       'gray-200': 'rgb(218, 218, 218)',
+      'green-100': 'rgb(182, 266, 138)',
+      'green-200': 'rgb(130, 187, 73)',
       'orange-100': 'rgb(255, 166, 128)',
       'orange-200': 'rgb(255, 142, 38)',
       'yellow-accent': 'rgb(255, 240, 104)',

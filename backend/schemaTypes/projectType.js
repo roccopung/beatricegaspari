@@ -159,5 +159,5 @@ export const projectType = defineType({
       maxLength: 140,
       group: 'seo',
     },
-  ],
+  ]
 })
