@@ -8,6 +8,7 @@ const route = useRoute()
     <span>Disable Preview</span>
   </a> -->
   <NuxtLayout>
-    <NuxtPage></NuxtPage>
+    <NuxtPage />
   </NuxtLayout>
 </template>
+<style scoped></style>

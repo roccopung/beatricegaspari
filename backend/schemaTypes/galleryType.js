@@ -30,6 +30,11 @@ export const galleryType = defineType({
           layout: 'grid',
         },
       },
+      defineField({
+        name: 'caption',
+        title: 'Caption',
+        type: 'string',
+      }),
     //   {
     //     name: 'display',
     //     type: 'string',

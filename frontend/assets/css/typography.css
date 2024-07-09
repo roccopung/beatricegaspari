@@ -9,6 +9,12 @@
 			line-height: 34px;
 		} */
   }
+  &--s {
+    font-family: "Arial Narrow", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.1;
+  }
   &--m {
     font-family: "Arial Narrow", "Arial", sans-serif;
     font-weight: 400;
@@ -42,12 +48,11 @@
   &--xl {
     font-family: "Arial Narrow", "Arial", sans-serif;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 32px;
     line-height: 1.15;
-    /* @media (--m) {
-			font-size: 32px;
-			line-height: 34px;
-		} */
+    @media (--m) {
+      font-size: 56px;
+		}
   }
 }
 

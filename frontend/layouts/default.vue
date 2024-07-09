@@ -13,7 +13,7 @@ provide('navigation', navigation);
 <template>
 	<main class="relative typo--m font-body">
 		<UiHeader />
-		<div>
+		<div class="content-container p-2 md:p-4">
 			<slot />
 		</div>
 		<UiFooter />
@@ -21,9 +21,9 @@ provide('navigation', navigation);
 </template>
 
 <style scoped>
-main {
-	display: grid;
-	grid-template-rows: auto 1fr auto;
-	height: calc(100svh - 1rem);
+
+.content-container {
+	min-height: calc(100svh - 2rem);
+	height: 100%;
 }
 </style>

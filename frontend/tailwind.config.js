@@ -10,6 +10,8 @@ module.exports = {
       '2xl': '1440px',
     },
     colors: {
+      'black': 'rgb(30, 30, 33)',
+      'white': 'rgb(255, 255, 255)',
       'gray-100': 'rgb(244, 244, 244)',
       'gray-200': 'rgb(218, 218, 218)',
       'orange-100': 'rgb(255, 166, 128)',

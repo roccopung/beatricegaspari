@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
   app: {
+    pageTransition: { name: 'page', mode: 'out-in' },
     head: {
       meta: [
         {
@@ -9,13 +10,16 @@ export default defineNuxtConfig({
       ],
     },
   },
+
   // runtimeConfig: {
   //   public: {
   //     baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
   //   },
   // },
   css: ["@/assets/css/index.css"],
+
   modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],
+
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
@@ -27,6 +31,7 @@ export default defineNuxtConfig({
     //   stega: true,
     // },
   },
+
   postcss: {
     plugins: {
       "./postcss-get-tokens": {
@@ -43,8 +48,11 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+
   imports: {
     dirs: ["./utils/**"],
   },
+
   watch: ["assets/css/tokens.json"],
+  compatibilityDate: "2024-07-08",
 });

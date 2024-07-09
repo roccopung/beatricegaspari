@@ -1,4 +1,4 @@
-export async function projectQuery(inputSlug) {
+export async function queryProject(inputSlug) {
   const nextData = ref(null);
   const prevData = ref(null);
 
@@ -17,7 +17,7 @@ export async function projectQuery(inputSlug) {
           title
         },
         description,
-        gallery[] {
+        gallery {
           images[] {
               "url": asset->url,
               "width": asset->metadata.dimensions.width,
@@ -27,6 +27,11 @@ export async function projectQuery(inputSlug) {
           },
         },
         pageBuilder[],
+        seoSlug,
+        seoTitle,
+        seoKeywords,
+        seoImage,
+        seoExcerpt,
         'next':  *[_type == 'project' && orderRank > ^.orderRank] | order(orderRank asc)[0] {
           _id,
             'slug' : slug.current,
@@ -38,11 +43,6 @@ export async function projectQuery(inputSlug) {
           'slug' : slug.current,
           year,
         },
-        seoSlug,
-        seoTitle,
-        seoKeywords,
-        seoImage,
-        seoExcerpt,
       }
     `,
     {

@@ -5,6 +5,8 @@ import { PortableText } from '@portabletext/vue';
 const navigation = inject('navigation');
 const navigationEl = ref(null);
 
+const route = useRoute();
+
 const { width } = useWindowSize();
 
 const aboutDescription = computed(() => navigation.value?.about?.aboutDescription || [])
@@ -59,6 +61,13 @@ watchEffect(() => {
     disabled.value = width.value < 720;
 });
 
+onBeforeRouteUpdate(
+    () => {
+        dropdownPortfolio.value = false
+        dropdownAbout.value = false
+        dropdownContact.value = false
+    }
+)
 </script>
 <template>
     <div :style="style" ref="dropdownRef" class="fixed w-full md:w-2/3 px-2 top-8 md:top-[1.75rem] md:right-4 md:px-0">
@@ -67,8 +76,8 @@ watchEffect(() => {
                 <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
                     :class="dropdownPortfolio ? 'bg-yellow-accent' : ''" @click="toggleDropdownPortfolio"
                     v-html="'Portfolio'" />
-                <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"><a href="#" target="_blank"
-                        rel="noopener noreferrer">Shop</a></button>
+                <!-- <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"><a href="#" target="_blank"
+                        rel="noopener noreferrer">Shop</a></button> -->
                 <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
                     :class="dropdownAbout ? 'bg-yellow-accent' : ''" @click="toggleDropdownAbout" v-html="'About'" />
                 <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
@@ -78,8 +87,7 @@ watchEffect(() => {
         </nav>
         <ul v-if="dropdownPortfolio">
             <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
-                hover:bg-yellow-accent active:bg-yellow-accent" 
-                v-html="'All' + `(${navigation.all})`" to="/" />
+                hover:bg-yellow-accent active:bg-yellow-accent" v-html="'All' + `(${navigation.all})`" to="/" />
             <div v-for="category in navigation.categories">
                 <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
                 hover:bg-yellow-accent active:bg-yellow-accent" v-if="category.count > 0" :key="category.id"

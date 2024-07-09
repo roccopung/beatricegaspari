@@ -68,6 +68,23 @@ export const projectType = defineType({
             ],
             annotations: [
               {
+                name: 'link',
+                type: 'object',
+                title: 'External link',
+                fields: [
+                  {
+                    name: 'href',
+                    title: 'URL',
+                    type: 'url',
+                  },
+                  {
+                    title: 'Open in new tab',
+                    name: 'blank',
+                    type: 'boolean',
+                  },
+                ],
+              },
+              {
                 name: 'internalLink',
                 type: 'object',
                 title: 'Internal link',
@@ -118,12 +135,12 @@ export const projectType = defineType({
           type: 'video',
         }),
         defineArrayMember({
-          name: 'textType',
+          name: 'textBlock',
           type: 'textType',
         }),
       ],
     }),
-    {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
+    // {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
     {name: 'seoKeywords', title: 'SEO Keywords', type: 'string', group: 'seo'},
     {name: 'seoImage', title: 'SEO Image', type: 'image', group: 'seo'},
     {
