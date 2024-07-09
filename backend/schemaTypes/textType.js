@@ -2,6 +2,7 @@ import {defineType, defineField} from 'sanity'
 
 export const textType = defineType({
   name: 'textType',
+  title: 'Text Editor Block',
   type: 'object',
   fields: [
     defineField({
