@@ -19,10 +19,10 @@ const pageBuilder = response.value.pageBuilder;
 </script>
 <template>
     <div class="top">
-        <div class="w-screen h-[60svh] mt-28">
+        <div v-if="galleryImages" class="w-screen h-[60svh] mt-28">
             <Swiper :inline="true" :data="galleryImages" />
         </div>
-        <div class="w-full flex justify-center typo--s">
+        <div v-if="details" class="w-full flex justify-center typo--s">
             <div class="md:flex flex-row mt-10 [&>*]:px-1">
                 <div class="bg-orange-200" v-html=" details.title" />
                 <div class="bg-yellow-accent" v-for="category in details.category" v-html="category.title" />
@@ -30,11 +30,11 @@ const pageBuilder = response.value.pageBuilder;
                 <div class="bg-white" v-html="details.technique" />
             </div>
         </div>
-        <div class="content pt-5">
+        <div v-if="description" class="content pt-5">
             <ModulePortableText :data="description" />
         </div>
     </div>
-    <div class="page-builder">
+    <div v-if="pageBuilder" class="page-builder">
         <PageBuilder :sections="pageBuilder" />
     </div>
 </template>
