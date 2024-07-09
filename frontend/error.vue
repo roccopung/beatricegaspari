@@ -1,6 +1,8 @@
 <script setup>
 const props = defineProps({
-  error: Object,
+  error: {
+    type: object
+  },
 })
 
 const route = useRoute();
@@ -14,7 +16,7 @@ const goBack = () => {
 
 <template>
   <div class="container typo--m">
-    <h2>{{ error.statusCode }}</h2>
+    <h2>{{ props.error.statusCode }}</h2>
     <div>page not found: {{ route.fullPath }}</div>
     <button @click="goBack">Go back to site</button>
   </div>
