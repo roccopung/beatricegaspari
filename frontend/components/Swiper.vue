@@ -37,6 +37,10 @@ onMounted(() => {
                 el: paginationEl.value,
                 type: "fraction",
             },
+            navigation: {
+                nextEl: nextEl.value,
+                prevEl: prevEl.value,
+            },
             keyboard: {
                 enabled: true,
             }
@@ -58,6 +62,10 @@ onUnmounted(() => {
             </div>
         </div>
         <div v-else class="swiper-slide"></div>
+        <div v-show="windowWidth > 700" ref="prevEl" class="swiper-btn-prev">
+        </div>
+        <div v-show="windowWidth > 700" ref="nextEl" class="swiper-btn-next">
+        </div>
     </div>
     <div v-if="props.data" ref="paginationEl" class="swiper-pagination typo--s"></div>
 </template>

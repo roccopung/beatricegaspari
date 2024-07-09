@@ -85,6 +85,7 @@ onBeforeRouteUpdate(
                     v-html="'Contact'" />
             </ul>
         </nav>
+
         <ul v-if="dropdownPortfolio">
             <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
                 hover:bg-yellow-accent active:bg-yellow-accent" v-html="'All' + `(${navigation.all})`" to="/" />
@@ -94,10 +95,12 @@ onBeforeRouteUpdate(
                     v-html="category.title + `(${category.count})`" :to="`/category/${category.slug}`" />
             </div>
         </ul>
+
         <div class="about_description-container bg-orange-200 w-full min-h-fit md:max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownAbout">
             <PortableText :value="aboutDescription" />
         </div>
+        
         <div class="contact-container bg-orange-200 w-full h-fit typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownContact">
             <ul>

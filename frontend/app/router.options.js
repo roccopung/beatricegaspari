@@ -5,7 +5,7 @@ export default {
 			return savedPosition
 		}
 		return new Promise(async (resolve) => {
-			nuxtApp.hook("page:transition:finish", async () => {
+			nuxtApp.hook("page:finish", async () => {
 				await nextTick()
 				resolve({ top: 0 })
 			})

@@ -1,8 +1,8 @@
 <script setup>
 import { queryProjectsByCategory } from '~/queries/projectsByCategory';
 
-const { params } = useRoute();
-const projectCategory = params.slug;
+const route = useRoute();
+const projectCategory = route.params.slug;
 const { response } = await queryProjectsByCategory(projectCategory);
 
 </script>
