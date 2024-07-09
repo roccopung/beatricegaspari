@@ -140,7 +140,7 @@ export const projectType = defineType({
         }),
       ],
     }),
-    // {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
+    {name: 'seoTitle', title: 'SEO title', type: 'string', group: 'seo'},
     {name: 'seoKeywords', title: 'SEO Keywords', type: 'string', group: 'seo'},
     {name: 'seoImage', title: 'SEO Image', type: 'image', group: 'seo'},
     {
