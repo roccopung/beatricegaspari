@@ -14,7 +14,7 @@ const chooseSection = (section) => {
 
 </script>
 <template>
-  <div>
+  <div v-if="props.sections">
     <component 
     class="builder-block" 
     v-for="section in props.sections" 
@@ -22,6 +22,7 @@ const chooseSection = (section) => {
     :is="chooseSection(section)"
     :data="section" />
   </div>
+  <div v-else />
 </template>
 <style scoped>
 </style>
