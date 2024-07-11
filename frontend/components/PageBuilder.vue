@@ -9,7 +9,7 @@ const chooseSection = (section) => {
   if (section._type === 'gallery') return resolveComponent('ModuleGallery')
   if (section._type === 'video') return resolveComponent('ModuleVideoEmbed')
   if (section._type === 'textBlock') return resolveComponent('ModulePortableText')
-  //   if (section._type === 'imageBlock') return resolveComponent('Image')
+    if (section._type === 'image') return resolveComponent('ModuleSingleImage')
 }
 
 console.log(props.sections)

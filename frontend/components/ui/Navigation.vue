@@ -73,25 +73,25 @@ onBeforeRouteUpdate(
     <div :style="style" ref="dropdownRef" class="fixed w-full md:w-2/3 px-2 top-8 md:top-[1.75rem] md:right-4 md:px-0">
         <nav ref="navigationEl" class="bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-grab">
             <ul class="w-full flex flex-row justify-between items-center h-full">
-                <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
-                    :class="dropdownPortfolio ? 'bg-yellow-accent' : ''" @click="toggleDropdownPortfolio"
+                <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"
+                    :class="dropdownPortfolio ? 'bg-yellow-100' : ''" @click="toggleDropdownPortfolio"
                     v-html="'Portfolio'" />
-                <!-- <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"><a href="#" target="_blank"
+                <!-- <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"><a href="#" target="_blank"
                         rel="noopener noreferrer">Shop</a></button> -->
-                <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
-                    :class="dropdownAbout ? 'bg-yellow-accent' : ''" @click="toggleDropdownAbout" v-html="'About'" />
-                <button class="p-1 hover:bg-yellow-accent active:bg-yellow-accent"
-                    :class="dropdownContact ? 'bg-yellow-accent' : ''" @click="toggleDropdownContact"
+                <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"
+                    :class="dropdownAbout ? 'bg-yellow-100' : ''" @click="toggleDropdownAbout" v-html="'About'" />
+                <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"
+                    :class="dropdownContact ? 'bg-yellow-100' : ''" @click="toggleDropdownContact"
                     v-html="'Contact'" />
             </ul>
         </nav>
 
         <ul v-if="dropdownPortfolio">
             <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
-                hover:bg-yellow-accent active:bg-yellow-accent" v-html="'All' + `(${navigation.all})`" to="/" />
+                hover:bg-yellow-100 active:bg-yellow-100" v-html="'All' + `(${navigation.all})`" to="/" />
             <div v-for="category in navigation.categories">
                 <NuxtLink class="p-1 w-fit h-fit block bg-gray-200 backdrop-blur-sm bg-opacity-35 cursor-pointer
-                hover:bg-yellow-accent active:bg-yellow-accent" v-if="category.count > 0" :key="category.id"
+                hover:bg-yellow-100 active:bg-yellow-100" v-if="category.count > 0" :key="category.id"
                     v-html="category.title + `(${category.count})`" :to="`/category/${category.slug}`" />
             </div>
         </ul>

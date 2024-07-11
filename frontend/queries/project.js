@@ -60,6 +60,7 @@ export async function queryProject(inputSlug) {
         'prev':  *[_type == 'project' && orderRank < ^.orderRank] | order(orderRank desc)[0] {
           _id,
           'slug' : slug.current,
+          title,
           year,
         },
       }

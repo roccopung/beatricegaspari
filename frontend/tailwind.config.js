@@ -18,8 +18,8 @@ module.exports = {
       'green-200': 'rgb(130, 187, 73)',
       'orange-100': 'rgb(255, 166, 128)',
       'orange-200': 'rgb(255, 142, 38)',
-      'yellow-accent': 'rgb(255, 240, 104)',
-      'yellow-dark': 'rgb(255, 204, 74)',
+      'yellow-100': 'rgb(255, 240, 104)',
+      'yellow-200': 'rgb(255, 204, 74)',
     },
     fontFamily: {
       body: ['Arial Narrow', 'Arial', 'sans-serif'],

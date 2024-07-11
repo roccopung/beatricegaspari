@@ -33,7 +33,7 @@ a {
 
 body::-webkit-scrollbar {
   width: 5px;
-  @apply bg-gray-200;
+  background-color: var(--color-grey-200);
 }
 
 body::-webkit-scrollbar-thumb {

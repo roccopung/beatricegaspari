@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <div class="bg-gray-200 h-fit w-[180px] backdrop-blur-sm bg-opacity-35 hover:bg-yellow-accent ">
+    <div class="bg-gray-200 h-fit w-[180px] backdrop-blur-sm bg-opacity-35 hover:bg-yellow-100 ">
         <NuxtLink to="/">
             <IconLogo />
         </NuxtLink>
