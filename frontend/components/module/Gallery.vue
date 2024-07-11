@@ -35,7 +35,7 @@ function openGallery(index) {
 
 useHead(() => ({
   bodyAttrs: {
-    class: isBodyOverflowHidden.value ? 'overflow-hidden' : 'overflow-y-auto'
+    class: isBodyOverflowHidden.value ? 'overflow-hidden' : ''
   }
 }));
 
@@ -69,7 +69,7 @@ onUnmounted(() => {
                      @click="openGallery(i)"
                      role="button"
                      tabindex="0">
-                    <Image :src="$urlFor(image.asset).quality(85).format('webp').url()" 
+                    <Image :src="$urlFor(image.asset).quality(85).format('avif').url()" 
                            layout="constrained"
                            :width="getImageDimensions(image.asset).width" 
                            :height="getImageDimensions(image.asset).height" 

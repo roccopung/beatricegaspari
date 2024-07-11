@@ -24,7 +24,7 @@ const props = defineProps({
 });
 
 
-onMounted(() => {
+onMounted(async () => {
     if (props.data) {
         swiper.value = new Swiper(swiperEl.value, {
             modules: [Navigation, Pagination],
