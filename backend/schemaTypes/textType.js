@@ -45,7 +45,7 @@ export const textType = defineType({
                 title: 'Internal link',
                 fields: [
                   {
-                    name: 'item',
+                    name: 'reference',
                     type: 'reference',
                     title: 'Reference',
                     to: [{type: 'project'}],
