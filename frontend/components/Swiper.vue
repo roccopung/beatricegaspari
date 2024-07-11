@@ -100,6 +100,7 @@ onUnmounted(() => {
 .swiper-slide img {
     height: 100%;
     object-fit: contain !important;
+    width: auto !important;
 }
 
 .swiper-btn-next,

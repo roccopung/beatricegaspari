@@ -15,9 +15,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/index.css"],
-
   modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],
-
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
@@ -29,7 +27,6 @@ export default defineNuxtConfig({
     //   stega: true,
     // },
   },
-
   postcss: {
     plugins: {
       "./postcss-get-tokens": {
@@ -46,11 +43,9 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
   imports: {
     dirs: ["./utils/**"],
   },
-
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
 });

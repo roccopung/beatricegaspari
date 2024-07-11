@@ -66,7 +66,10 @@ swiper-slide {
 }
 
 swiper-slide img {
-  height: 88svh;
+  height: 80svh;
   object-fit: contain !important;
+  @media(--m) {
+    height: 88svh;
+  }
 }
 </style>

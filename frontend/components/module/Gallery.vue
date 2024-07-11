@@ -1,14 +1,6 @@
 <script setup>
-import Swiper from 'swiper';
 import { Image } from "@unpic/vue";
-import 'swiper/swiper-bundle.css';
 import { getImageDimensions } from '@sanity/asset-utils'
-
-const { width } = useWindowSize()
-const windowWidth = width;
-
-const swiper = ref();
-const swiperEl = ref();
 
 const modalEl = ref(null)
 
@@ -24,39 +16,19 @@ const props = defineProps({
 
 function closeGallery() {
     isOpen.value = false;
-    isBodyOverflowHidden.value = false;
 }
 
 function openGallery(index) {
     initialSlide.value = index;
     isOpen.value = true;
-    isBodyOverflowHidden.value = true;
 }
 
 useHead(() => ({
     bodyAttrs: {
-        class: isBodyOverflowHidden.value ? 'overflow-hidden' : ''
+        class: isOpen.value ? 'overflow-hidden' : ''
     }
 }));
 
-// onMounted(() => {
-//     if (props.data) {
-//         swiper.value = new Swiper(swiperEl.value, {
-//             loop: false,
-//             slidesPerView: 'auto',
-//             spaceBetween: 5,
-//             centeredSlides: false,
-//             keyboard: {
-//                 enabled: true,
-//             }
-//         });
-//     }
-// });
-
-onUnmounted(() => {
-    swiper.value?.destroy?.();
-    isBodyOverflowHidden.value = false;
-});
 </script>
 
 <template>
@@ -82,7 +54,7 @@ onUnmounted(() => {
 
 <style scoped>
 .gallery-slide {
-    @apply bg-white
+    @apply bg-white;
 }
 
 .gallery-slide,
@@ -101,13 +73,13 @@ onUnmounted(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 100;
 }
 
 .icon-close-container {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    @apply top-5;
+    @apply right-5;
     cursor: pointer;
     z-index: 1001;
 }
