@@ -11,9 +11,9 @@ const hoveredProjectId = ref(null);
 </script>
 <template>
     <div class="grid-container w-full p-2 pt-32 md:p-4 md:pt-32">
-        <div class="grid gap-1 grid-cols-2 md:grid-cols-3">
+        <div class="projects-grid grid gap-1 grid-cols-2 md:grid-cols-3">
             <NuxtLink v-for="project in projects" :key="project._id" @mouseover="hoveredProjectId = project._id"
-                @mouseleave="hoveredProjectId = null" class="grid-item w-fit h-fit hover:rotate-2 transition" :to="`/project/${project.slug}`">
+                @mouseleave="hoveredProjectId = null" class="grid-item h-fit hover:rotate-2 transition" :to="`/project/${project.slug}`">
                 <Image 
                 class="project-image" :class="{ 'mix-blend-multiply': hoveredProjectId === project._id }"
                 :src="$urlFor(project.cover).quality(50).format('avif').url()" layout="constrained"

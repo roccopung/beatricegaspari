@@ -32,13 +32,13 @@ const nextData = response.value.next;
                 <Swiper :inline="true" :data="galleryImages" />
             </div>
             <div v-if="details" class="w-full flex justify-center typo--s">
-                <div class="md:flex flex-row mt-10 [&>*]:px-1 dark:[&>*]:px-0 dark:gap-5">
-                    <div v-if="details.title" class="bg-orange-200 dark:bg-opacity-0 " v-html="details.title" />
-                    <div v-if="details.client" class="bg-green-100 dark:bg-gray-100" v-html="details.client" />
-                    <div v-if="details.category && details.category.length" class="bg-yellow-100 dark:bg-gray-100"
+                <div class="details md:flex flex-row mt-10 [&>*]:px-1">
+                    <div v-if="details.title" class="detail detail-title " v-html="details.title" />
+                    <div v-if="details.client" class="detail detail-client " v-html="details.client" />
+                    <div v-if="details.category && details.category.length" class="detail detail-category "
                         v-for="category in details.category" v-html="category.title" />
-                    <div v-if="details.year" class="bg-gray-200 dark:bg-gray-100" v-html="details.year" />
-                    <div v-if="details.technique" class="bg-white dark:bg-gray-100" v-html="details.technique" />
+                    <div v-if="details.year" class="detail detail-year" v-html="details.year" />
+                    <div v-if="details.technique" class="detail detail-technique " v-html="details.technique" />
                 </div>
             </div>
         </div>
@@ -53,4 +53,42 @@ const nextData = response.value.next;
         </div>
     </div>
 </template>
-<style scoped></style>
+<style scoped>
+
+/* .detail {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+*/
+.detail-title {
+    background-color: var(--color-orange-200);
+}
+
+.detail-client {
+    background-color: var(--color-green-100);
+}
+
+.detail-category {
+    background-color: var(--color-yellow-100);
+}
+
+.detail-year {
+    background-color: var(--color-gray-200);
+}
+
+.detail-technique {
+    background-color: var(--color-white);
+}
+
+
+@media (prefers-color-scheme: dark) {
+
+    .detail-title,
+    .detail-client,
+    .detail-category,
+    .detail-year,
+    .detail-technique {
+        background-color: var(--darkMode-color-grey-200);
+    }
+} 
+</style>

@@ -66,4 +66,5 @@ useHead({
   opacity: 0;
   filter: blur(0.3rem);
 }
+
 </style>

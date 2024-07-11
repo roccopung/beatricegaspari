@@ -61,14 +61,9 @@ onMounted(() => {
 }
 
 .plyr {
-    --plyr-color-main: var(--color-acid-green);
-    --plyr-video-control-color: var(--color-primary-light);
+    --plyr-color-main: var(--color-orange-100);
+    --plyr-video-control-color: var(--color-white);
     --plyr-video-controls-background: transparent;
-
-    @media(--m) {
-        padding: var(--space-xs);
-        border-radius: var(--space-xs);
-    }
 }
 
 .plyr.plyr--stopped .plyr__controls { opacity: 0 !important; }
