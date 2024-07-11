@@ -10,6 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/seo": "2.0.0-rc.12",
     "@vueuse/core": "^10.11.0",
     "@vueuse/nuxt": "10.11.0",
     "@vueuse/router": "^10.11.0",

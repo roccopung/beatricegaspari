@@ -1,6 +1,5 @@
 <script setup>
 import { queryProject } from '~/queries/project';
-import { PortableText } from '@portabletext/vue';
 
 definePageMeta({
     key: route => route.fullPath
@@ -23,7 +22,7 @@ const description = response.value.description;
 const pageBuilder = response.value.pageBuilder;
 const prevData = response.value.prev;
 const nextData = response.value.next;
-console.log(response)
+// console.log(response)
 
 </script>
 <template>

@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/index.css"],
-  modules: ["@vueuse/nuxt", "@nuxtjs/sanity"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/sanity", "@nuxtjs/seo"],
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
