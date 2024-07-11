@@ -38,10 +38,10 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-thumb {
   border-radius: 0px;
-  background: rgb(240,144,255);
+  background: rgb(240, 144, 255);
 }
 
 body {
   scrollbar-width: thin;
-  scrollbar-color: rgb(240,144,255) var(--color-grey-200);
+  scrollbar-color: rgb(240, 144, 255) var(--color-grey-200);
 }

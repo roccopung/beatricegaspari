@@ -9,7 +9,6 @@ useHead({
   },
   meta: [
     { charset: "UTF-8" },
-    { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
     { name: 'description', content: 'Beatrice Gaspari Illustration' },
     // { name: 'keywords', content: 'Frontend Development, Frontend Developer, Digital Designer, Digital Design, Visual Developer, RCA, Royal College of Art, Politecnico di Milano, Art & Technology, Website Development, Web Design, Graphic Design, Introspective Design, Visual Communication, Schema Design' }
   ],

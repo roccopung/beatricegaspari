@@ -32,13 +32,13 @@ const nextData = response.value.next;
                 <Swiper :inline="true" :data="galleryImages" />
             </div>
             <div v-if="details" class="w-full flex justify-center typo--s">
-                <div class="md:flex flex-row mt-10 [&>*]:px-1">
-                    <div v-if="details.title" class="bg-orange-200" v-html="details.title" />
-                    <div v-if="details.client" class="bg-green-100" v-html="details.client" />
-                    <div v-if="details.category && details.category.length" class="bg-yellow-100"
+                <div class="md:flex flex-row mt-10 [&>*]:px-1 dark:[&>*]:px-0 dark:gap-5">
+                    <div v-if="details.title" class="bg-orange-200 dark:bg-opacity-0 " v-html="details.title" />
+                    <div v-if="details.client" class="bg-green-100 dark:bg-gray-100" v-html="details.client" />
+                    <div v-if="details.category && details.category.length" class="bg-yellow-100 dark:bg-gray-100"
                         v-for="category in details.category" v-html="category.title" />
-                    <div v-if="details.year" class="bg-gray-200" v-html="details.year" />
-                    <div v-if="details.technique" class="bg-white" v-html="details.technique" />
+                    <div v-if="details.year" class="bg-gray-200 dark:bg-gray-100" v-html="details.year" />
+                    <div v-if="details.technique" class="bg-white dark:bg-gray-100" v-html="details.technique" />
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 import { Image } from "@unpic/vue";
 import 'swiper/swiper-bundle.css';
 
+
 const { width } = useWindowSize()
 const windowWidth = width;
 
