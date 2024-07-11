@@ -65,67 +65,54 @@ const ImageComponent = ({ value, isInline }) => {
   ])
 }
 
-const components = {
+
+const createLinkComponent = (className) => ({ value }, { slots }) => {
+  const target = (value?.href || '').startsWith('http') ? '_blank' : undefined;
+  return h(
+    'a',
+    {
+      href: value?.href,
+      target,
+      rel: target === '_blank' ? 'noindex nofollow' : undefined,
+      class: className,
+    },
+    slots.default?.(),
+  );
+};
+
+const createInternalLinkComponent = (className) => ({ value }, { slots }) => {
+  const url = `/project/${value.slug}`;
+  return h('a', { href: url, class: className }, slots.default?.());
+};
+
+const sharedComponents = {
   block: {
-    normal: (_, { slots }) => h('p', { class: 'typo--xl' }, slots.default?.()),
+    normal: (_, { slots }) => h('span', { class: 'typo--xl' }, slots.default?.()),
     h2: (_, { slots }) => h('h2', { class: 'typo--l' }, slots.default?.()),
   },
   marks: {
-    link: ({ value }, { slots }) => {
-      const target = (value?.href || '').startsWith('http') ? '_blank' : undefined;
-      return h(
-        'a',
-        {
-          href: value?.href,
-          target,
-          rel: target === '_blank' ? 'noindex nofollow' : undefined,
-          class: 'external-link',
-        },
-        slots.default?.(),
-      );
-    },
-    internalLink: ({ value }, { slots }) => {
-      const url = `/project/${value.slug.current}`
-      return h('nuxtlink', { href: url, class: 'internal-link' }, slots.default?.())
-    }
+    link: createLinkComponent('external-link'),
+    internalLink: createInternalLinkComponent('internal-link'),
   },
   types: {
     image: ImageComponent,
+  },
+};
+
+const components = {
+  ...sharedComponents,
+  types: {
+    ...sharedComponents.types,
     textBlock: (props) => h('div', { class: 'text-block' }, [
       h('h3', { class: 'typo--xl opacity-35' }, props.value.title),
       h(PortableText, {
         value: props.value.TextBlock,
-        components: {
-          types: {
-            image: ImageComponent,
-          },
-          block: {
-            normal: (_, { slots }) => h('span', { class: 'typo--xl' }, slots.default?.()),
-          },
-          marks: {
-            link: ({ value }, { slots }) => {
-              const target = value.blank ? '_blank' : undefined
-              return h(
-                'a',
-                {
-                  href: value.href,
-                  target,
-                  rel: target === '_blank' ? 'noopener' : undefined,
-                  class: 'external-link',
-                },
-                slots.default?.()
-              )
-            },
-            internalLink: ({ value }, { slots }) => {
-              const url = `/project/${value.slug}`
-              return h('a', { href: url, class: 'internal-link' }, slots.default?.())
-            }
-          },
-        }
+        components: sharedComponents,
       }),
-    ])
+    ]),
   },
 };
+
 
 useHead(() => ({
   bodyAttrs: {
@@ -164,13 +151,14 @@ useHead(() => ({
   height: 1.6rem;
   display: inline-block;
   vertical-align: baseline;
-  margin: 0 0.7rem 0 0;
+  @apply mx-1;
 }
 
 @media(--m) {
   .inline-image {
     height: 2.6rem;
-    margin: 0 0.7rem 0 0;
+    /* margin: 0 0.7rem 0 0; */
+    @apply mx-3;
   }
 }
 

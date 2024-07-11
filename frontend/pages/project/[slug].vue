@@ -21,6 +21,7 @@ const details = {
 }
 const description = response.value.description;
 const pageBuilder = response.value.pageBuilder;
+console.log(description)
 
 </script>
 <template>
