@@ -90,7 +90,7 @@ export const projectType = defineType({
                 title: 'Internal link',
                 fields: [
                   {
-                    name: 'reference',
+                    name: 'item',
                     type: 'reference',
                     title: 'Reference',
                     to: [{type: 'project'}],

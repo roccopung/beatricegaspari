@@ -6,6 +6,15 @@ export async function queryProject(inputSlug) {
   const { data } = await useSanityQuery(
     groq`
       *[_type == 'project' && slug.current==$projectSlug ][0] {
+        // TextBlock[] {
+        //     ...,
+        //     markDefs[]{
+        //     ...,
+        //     _type == "internalLink" => {
+        //       "slug": @.reference->slug.current
+        //       }
+        //     }
+        //   },
         _id,
         'slug' : slug.current,
         title,
