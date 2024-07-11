@@ -40,10 +40,10 @@ const pageBuilder = response.value.pageBuilder;
                 </div>
             </div>
         </div>
-        <div v-if="description" class="content pt-5">
+        <div v-if="description" class="content pt-5 px-2 md:p-4">
             <ModulePortableText :data="description" />
         </div>
-        <div v-if="pageBuilder" class="page-builder">
+        <div v-if="pageBuilder" class="page-builder p-2 md:p-4">
             <PageBuilder :sections="pageBuilder" />
         </div>
     </div>

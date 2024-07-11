@@ -30,9 +30,9 @@ onMounted(async () => {
             modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 'auto',
-            spaceBetween: 5,
+            // spaceBetween: 5,
             centeredSlides: true,
-            freeMode: true,
+            freeMode: false,
             pagination: {
                 el: paginationEl.value,
                 type: "fraction",
@@ -62,9 +62,9 @@ onUnmounted(() => {
             </div>
         </div>
         <div v-else class="swiper-slide"></div>
-        <div v-show="windowWidth > 700" ref="prevEl" class="swiper-btn-prev">
+        <div v-show="windowWidth > 1280" ref="prevEl" class="swiper-btn-prev">
         </div>
-        <div v-show="windowWidth > 700" ref="nextEl" class="swiper-btn-next">
+        <div v-show="windowWidth > 1280" ref="nextEl" class="swiper-btn-next">
         </div>
     </div>
     <div v-if="props.data" ref="paginationEl" class="swiper-pagination typo--s"></div>
@@ -94,6 +94,7 @@ onUnmounted(() => {
     justify-content: center;
     align-items: center;
     width: fit-content;
+    @apply mx-1;
 }
 
 .swiper-slide img {

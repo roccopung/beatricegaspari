@@ -144,11 +144,15 @@ useHead(() => ({
 
 <style>
 .external-link {
-  text-decoration: underline dashed var(--color-orange-200);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-orange-200);
 }
 
 .internal-link {
-  text-decoration: underline dashed var(--color-green-200);
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--color-green-200);
 }
 
 .image-container {

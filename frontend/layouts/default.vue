@@ -13,7 +13,7 @@ provide('navigation', navigation);
 <template>
 	<main class="relative typo--m font-body">
 		<UiHeader />
-		<div class="content-container p-2 md:p-4">
+		<div class="content-container">
 			<slot />
 		</div>
 		<UiFooter />

@@ -5,6 +5,7 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
+  overscroll-behavior-y: none;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
   background-color: var(--color-gray-100);
   color: var(--color-black);
   width: 100%;
+  overscroll-behavior-y: none;
 }
 
 img,
@@ -30,12 +32,16 @@ a {
 }
 
 body::-webkit-scrollbar {
-    width: 5px;
-    background: var(--color-grey-200);
+  width: 5px;
+  @apply bg-gray-200;
 }
 
 body::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-    background: rgb(240,144,255);
+  border-radius: 0px;
+  background: rgb(240,144,255);
+}
+
+body {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(240,144,255) var(--color-grey-200);
 }

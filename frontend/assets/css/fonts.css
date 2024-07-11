@@ -6,3 +6,11 @@
 	font-style: regular;
 	font-stretch: normal;
 }
+
+@font-face {
+	font-family: "Arial Narrow";
+	src: url("/fonts/ArialNarrow-Regular.woff") format("woff");
+	font-weight: 400;
+	font-style: regular;
+	font-stretch: normal;
+}
