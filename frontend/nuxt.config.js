@@ -48,9 +48,4 @@ export default defineNuxtConfig({
   },
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
-  unlighthouse: {
-    scanner: {
-      device: 'desktop',
-    }
-  }
 });
