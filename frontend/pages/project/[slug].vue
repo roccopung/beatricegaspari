@@ -81,7 +81,7 @@ const nextData = response.value.next;
 }
 
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
 
     .detail-title,
     .detail-client,
@@ -90,5 +90,5 @@ const nextData = response.value.next;
     .detail-technique {
         background-color: var(--darkMode-color-grey-200);
     }
-} 
+}  */
 </style>

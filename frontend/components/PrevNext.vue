@@ -42,7 +42,7 @@ const goToPrevPage = () => {
     width: 100%;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 1fr;
-	grid-column-gap: 2px;
+	grid-column-gap: 0px;
 	grid-row-gap: 0px;
 	@apply bg-gray-100;
 }
