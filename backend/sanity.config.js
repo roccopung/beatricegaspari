@@ -4,6 +4,7 @@ import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemaTypes'
 import {structure} from './structure'
 // import {presentationTool} from 'sanity/presentation'
+import {media} from 'sanity-plugin-media'
 import {vercelDeployTool} from 'sanity-plugin-vercel-deploy'
 
 export const sanity_preview_url = process.env.SANITY_STUDIO_PREVIEW_URL || 'http://localhost:3000'
@@ -19,6 +20,7 @@ export default defineConfig({
     structureTool({
       structure,
     }),
+    media(),
     visionTool(),
     // presentationTool({
     //   previewUrl: {
