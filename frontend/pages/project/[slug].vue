@@ -89,6 +89,6 @@ const nextData = response.value.next;
     .detail-year,
     .detail-technique {
         background-color: var(--darkMode-color-grey-200);
-    }
+    }x
 }  */
 </style>

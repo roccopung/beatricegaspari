@@ -18,6 +18,7 @@
     "hls.js": "^1.5.13",
     "modern-normalize": "^2.0.0",
     "nuxt": "^3.12.3",
+    "nuxt-vitalizer": "^0.10.0",
     "postcss": "^8.4.39",
     "postcss-nested": "^6.0.1",
     "postcss-preset-env": "^9.6.0",

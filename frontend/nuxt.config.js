@@ -15,7 +15,7 @@ export default defineNuxtConfig({
     },
   },
   css: ["@/assets/css/index.css"],
-  modules: ["@vueuse/nuxt", "@nuxtjs/sanity", "@nuxtjs/seo"],
+  modules: ["@vueuse/nuxt", "@nuxtjs/sanity", "@nuxtjs/seo", "nuxt-vitalizer"],
   sanity: {
     projectId: process.env.NUXT_SANITY_PROJECT_ID,
     dataset: process.env.NUXT_SANITY_DATASET,
@@ -48,4 +48,9 @@ export default defineNuxtConfig({
   },
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
+  unlighthouse: {
+    scanner: {
+      device: 'desktop',
+    }
+  }
 });
