@@ -6,7 +6,7 @@ const projectCategory = route.params.slug;
 const { response } = await queryProjectsByCategory(projectCategory);
 
 useSeoMeta({
-  title: `BG | ${projectCategory}`,
+  title: `${projectCategory}`,
 })
 
 </script>
