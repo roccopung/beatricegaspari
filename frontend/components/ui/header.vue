@@ -1,5 +1,6 @@
 <script setup>
 const navigationKey = ref(0);
+const router = useRoute();
 const { width } = useWindowSize();
 
 const forceRerender = () => {
@@ -11,6 +12,12 @@ watch(width, (oldVal, newVal) => {
 		forceRerender();
 	}
 });
+
+onBeforeRouteUpdate((to, from) => {
+	forceRerender();
+});
+
+
 </script>
 
 <template>
