@@ -3,14 +3,13 @@ const runtimeConfig = useRuntimeConfig();
 
 
 useHead({
-  title: 'Beatrice Gaspari Illustration',
+  title: 'Beatrice Gaspari',
   htmlAttrs: {
     lang: 'en-gb'
   },
   meta: [
     { charset: "UTF-8" },
-    { name: 'description', content: 'Beatrice Gaspari Illustration' },
-    // { name: 'keywords', content: 'Frontend Development, Frontend Developer, Digital Designer, Digital Design, Visual Developer, RCA, Royal College of Art, Politecnico di Milano, Art & Technology, Website Development, Web Design, Graphic Design, Introspective Design, Visual Communication, Schema Design' }
+    { name: 'keywords', content: 'illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration' }
   ],
   link: [
     { rel: 'canonical', href: runtimeConfig?.public?.FRONT_END_URL },

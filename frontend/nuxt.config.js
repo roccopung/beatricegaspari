@@ -48,4 +48,11 @@ export default defineNuxtConfig({
   },
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
+  devtools: { enabled: true },
+  site: {
+    url: 'https://beatricegaspari.com',
+    name: 'Beatrice Gaspari',
+    description: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
+    defaultLocale: 'en',
+  }
 });

@@ -22,7 +22,16 @@ const description = response.value.description;
 const pageBuilder = response.value.pageBuilder;
 const prevData = response.value.prev;
 const nextData = response.value.next;
-// console.log(response)
+
+const seo = {
+    title: response.value.seoTitle,
+}
+
+
+useSeoMeta({
+  title: seo.title,
+  ogTitle: seo.title,
+})
 
 </script>
 <template>
