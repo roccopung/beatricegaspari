@@ -48,7 +48,7 @@ export default defineNuxtConfig({
   },
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   site: {
     url: 'https://beatricegaspari.com',
     name: 'Beatrice Gaspari',

@@ -16,10 +16,6 @@ useSeoMeta({
   ogImage: '~/images/favicon-temp.png',
 })
 
-onMounted(() => {
-	console.log(settings.value);
-})
-
 </script>
 <template>
 	<Grid :projects="response" />
