@@ -9,11 +9,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  runtimeConfig: {
-    public: {
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://beatricegaspari.vercel.app" || "http://localhost:3000",
-    },
-  },
+  // runtimeConfig: {
+  //   public: {
+  //     baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://beatricegaspari.vercel.app" || "http://localhost:3000",
+  //   },
+  // },
   css: ["@/assets/css/index.css"],
   modules: ["@vueuse/nuxt", "@nuxtjs/sanity", "@nuxtjs/seo", "nuxt-vitalizer"],
   sanity: {
