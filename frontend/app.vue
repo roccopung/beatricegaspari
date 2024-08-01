@@ -13,27 +13,27 @@ useHead({
   ],
   link: [
     { rel: 'canonical', href: runtimeConfig?.public?.FRONT_END_URL },
-    {
-      rel: 'preload',
-      type: 'font/woff',
-      href: '/fonts/ArialNarrow-Regular.woff',
-      as: 'font',
-      crossorigin: ''
-    },
-    {
-      rel: 'preload',
-      type: 'font/woff',
-      href: '/fonts/Piscolabis-Regular.woff',
-      as: 'font',
-      crossorigin: ''
-    },
-    {
-      rel: 'preload',
-      type: 'font/woff2',
-      href: '/fonts/Piscolabis-Regular.woff2',
-      as: 'font',
-      crossorigin: ''
-    }
+    // {
+    //   rel: 'preload',
+    //   type: 'font/woff',
+    //   href: '/fonts/ArialNarrow-Regular.woff',
+    //   as: 'font',
+    //   crossorigin: ''
+    // },
+    // {
+    //   rel: 'preload',
+    //   type: 'font/woff',
+    //   href: '/fonts/Piscolabis-Regular.woff',
+    //   as: 'font',
+    //   crossorigin: ''
+    // },
+    // {
+    //   rel: 'preload',
+    //   type: 'font/woff2',
+    //   href: '/fonts/Piscolabis-Regular.woff2',
+    //   as: 'font',
+    //   crossorigin: ''
+    // }
 
   ]
 })
