@@ -11,7 +11,7 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     public: {
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL,
+      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://beatricegaspari.vercel.app" || "http://localhost:3000",
     },
   },
   css: ["@/assets/css/index.css"],

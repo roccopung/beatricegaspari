@@ -13,29 +13,36 @@ useHead({
   ],
   link: [
     { rel: 'canonical', href: runtimeConfig?.public?.FRONT_END_URL },
-    // {
-    //   rel: 'preload',
-    //   type: 'font/woff',
-    //   href: '/fonts/ArialNarrow-Regular.woff',
-    //   as: 'font',
-    //   crossorigin: ''
-    // },
-    // {
-    //   rel: 'preload',
-    //   type: 'font/woff',
-    //   href: '/fonts/Piscolabis-Regular.woff',
-    //   as: 'font',
-    //   crossorigin: ''
-    // },
-    // {
-    //   rel: 'preload',
-    //   type: 'font/woff2',
-    //   href: '/fonts/Piscolabis-Regular.woff2',
-    //   as: 'font',
-    //   crossorigin: ''
-    // }
+    {
+      rel: 'preload',
+      type: 'font/woff',
+      href: '/fonts/ArialNarrow-Regular.woff',
+      as: 'font',
+      crossorigin: ''
+    },
+    {
+      rel: 'preload',
+      type: 'font/woff',
+      href: '/fonts/Piscolabis-Regular.woff',
+      as: 'font',
+      crossorigin: ''
+    },
+    {
+      rel: 'preload',
+      type: 'font/woff2',
+      href: '/fonts/Piscolabis-Regular.woff2',
+      as: 'font',
+      crossorigin: ''
+    }
 
   ]
+})
+
+useSeoMeta({
+  ogTitle: 'Beatrice Gaspari',
+  description: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
+  ogDescription: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
+  ogImage: '~/images/favicon.png',
 })
 // const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
 </script>
