@@ -84,6 +84,9 @@ export default defineNuxtConfig({
   watch: ["assets/css/tokens.json"],
   compatibilityDate: "2024-07-08",
   devtools: { enabled: false },
+  nitro: {
+    static: true,
+  },
   // site: {
   //   url: "https://beatricegaspari.com",
   //   name: "Beatrice Gaspari",
