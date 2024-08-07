@@ -67,5 +67,4 @@ onMounted(() => {
 }
 
 .plyr.plyr--stopped .plyr__controls { opacity: 0 !important; }
-
 </style>

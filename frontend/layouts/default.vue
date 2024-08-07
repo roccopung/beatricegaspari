@@ -18,7 +18,9 @@ useSeoMeta({
 
 <template>
 	<main class="relative typo--m font-body">
-		<UiHeader />
+		<RouterView>
+			<UiHeader />
+		</RouterView>
 		<div class="content-container">
 			<slot />
 		</div>
@@ -27,7 +29,6 @@ useSeoMeta({
 </template>
 
 <style scoped>
-
 .content-container {
 	min-height: calc(100svh - 2rem);
 	height: 100%;

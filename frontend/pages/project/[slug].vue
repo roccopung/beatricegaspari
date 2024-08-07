@@ -29,8 +29,8 @@ const seo = {
 
 
 useSeoMeta({
-  title: seo.title,
-  ogTitle: seo.title,
+    title: seo.title,
+    ogTitle: seo.title,
 })
 
 </script>
@@ -55,7 +55,9 @@ useSeoMeta({
             <ModulePortableText :data="description" />
         </div>
         <div v-if="pageBuilder" class="page-builder p-2 md:p-4">
-            <PageBuilder :sections="pageBuilder" />
+            <ClientOnly>
+                <PageBuilder :sections="pageBuilder" />
+            </ClientOnly>
         </div>
         <div>
             <PrevNext :prevData="prevData" :nextData="nextData" />
@@ -63,7 +65,6 @@ useSeoMeta({
     </div>
 </template>
 <style scoped>
-
 /* .detail {
     padding-left: 0.2rem;
     padding-right: 0.2rem;
