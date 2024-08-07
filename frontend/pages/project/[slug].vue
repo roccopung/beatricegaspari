@@ -35,7 +35,7 @@ useSeoMeta({
 
 </script>
 <template>
-    <div class="pb-10 flex flex-col gap-2">
+    <div class="pb-20 flex flex-col gap-2">
         <div class="top">
             <div v-if="galleryImages" class="w-screen h-[60svh] mt-28">
                 <Swiper :inline="true" :data="galleryImages" />
