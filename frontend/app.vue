@@ -15,7 +15,7 @@ useHead({
     { name: 'keywords', content: 'illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration' }
   ],
   link: [
-    { rel: 'canonical', href: runtimeConfig?.public?.FRONT_END_URL },
+    { rel: 'canonical', href: runtimeConfig?.public?.baseUrl },
     {
       rel: 'preload',
       type: 'font/woff',
