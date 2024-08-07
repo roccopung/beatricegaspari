@@ -1,14 +1,4 @@
 <script setup>
-// const runtimeConfig = useRuntimeConfig();
-
-
-// useSeoMeta({
-//   ogTitle: 'Beatrice Gaspari',
-//   description: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
-//   ogDescription: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
-//   ogImage: '~/images/favicon.png',
-// })
-// const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
 </script>
 <template>
   <!-- <a v-if="previewEnabled && !inFrame" :href="`/preview/disable?redirect=${route.fullPath}`" class="preview-toggle">
