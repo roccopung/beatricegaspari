@@ -12,34 +12,34 @@ export default defineNuxtConfig({
           name: "viewport",
           content: "width=device-width, initial-scale=1, viewport-fit=cover",
         },
-        {
-          name: "keywords",
-          content:
-            "illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration",
-        },
-      ],
-      link: [
-        {
-          rel: "preload",
-          type: "font/woff",
-          href: "/fonts/ArialNarrow-Regular.woff",
-          as: "font",
-          crossorigin: "",
-        },
-        {
-          rel: "preload",
-          type: "font/woff",
-          href: "/fonts/Piscolabis-Regular.woff",
-          as: "font",
-          crossorigin: "",
-        },
-        {
-          rel: "preload",
-          type: "font/woff2",
-          href: "/fonts/Piscolabis-Regular.woff2",
-          as: "font",
-          crossorigin: "",
-        },
+      //   {
+      //     name: "keywords",
+      //     content:
+      //       "illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration",
+      //   },
+      // ],
+      // link: [
+      //   {
+      //     rel: "preload",
+      //     type: "font/woff",
+      //     href: "/fonts/ArialNarrow-Regular.woff",
+      //     as: "font",
+      //     crossorigin: "",
+      //   },
+      //   {
+      //     rel: "preload",
+      //     type: "font/woff",
+      //     href: "/fonts/Piscolabis-Regular.woff",
+      //     as: "font",
+      //     crossorigin: "",
+      //   },
+      //   {
+      //     rel: "preload",
+      //     type: "font/woff2",
+      //     href: "/fonts/Piscolabis-Regular.woff2",
+      //     as: "font",
+      //     crossorigin: "",
+      //   },
       ],
     },
   },
