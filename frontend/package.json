@@ -4,9 +4,8 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "dev-https": "NODE_TLS_REJECT_UNAUTHORIZED=0 nuxt dev --https --ssl-cert certs/localhost.pem --ssl-key certs/localhost-key.pem",
-    "generate": "nuxt generate",
+    "generate": "npx nuxi generate",
     "preview": "nuxt preview",
-    "preview-https": "NITRO_SSL_CERT=$(cat certs/localhost.pem) NITRO_SSL_KEY=$(cat certs/localhost-key.pem) node .output/server/index.mjs",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
