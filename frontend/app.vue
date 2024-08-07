@@ -9,6 +9,9 @@ useHead({
   },
   meta: [
     { charset: "UTF-8" },
+    { name: "robots", content: "index, follow" },
+    { name: "googlebot", content: "index, follow" },
+    { name: "viewport", content: "width=device-width, initial-scale=1, viewport-fit=cover" },
     { name: 'keywords', content: 'illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration' }
   ],
   link: [

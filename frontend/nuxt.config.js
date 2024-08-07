@@ -1,14 +1,4 @@
 export default defineNuxtConfig({
-  app: {
-    head: {
-      meta: [
-        {
-          name: "viewport",
-          content: "width=device-width, initial-scale=1, viewport-fit=cover",
-        },
-      ],
-    },
-  },
   runtimeConfig: {
     public: {
       baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://beatricegaspari.vercel.app" || "http://localhost:3000",
@@ -47,6 +37,9 @@ export default defineNuxtConfig({
     dirs: ["./utils/**"],
   },
   watch: ["assets/css/tokens.json"],
+  generate: {
+    fallback: true,
+  },
   compatibilityDate: "2024-07-08",
   devtools: { enabled: false },
   site: {
