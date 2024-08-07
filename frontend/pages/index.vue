@@ -5,16 +5,16 @@ import { querySettings } from '~/queries/settings';
 const { response } = await queryProjectsList();
 const {settings} = await querySettings();
 
-const siteTitle = settings.value.siteTitle;
-const description = settings.value.excerpt;
+// const siteTitle = settings.value.siteTitle;
+// const description = settings.value.excerpt;
 
-useSeoMeta({
-  title: siteTitle,
-  ogTitle: siteTitle,
-  description: description,
-  ogDescription: description,
-  ogImage: '~/images/favicon-temp.png',
-})
+// useSeoMeta({
+//   title: siteTitle,
+//   ogTitle: siteTitle,
+//   description: description,
+//   ogDescription: description,
+//   ogImage: '~/images/favicon-temp.png',
+// })
 
 </script>
 <template>
