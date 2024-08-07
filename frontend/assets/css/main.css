@@ -1,8 +1,8 @@
 html {
-  font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
   font-size: 16px;
   overscroll-behavior-y: none;
@@ -31,17 +31,13 @@ a {
   text-decoration: none;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 5px;
   background-color: var(--color-grey-200);
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   border-radius: 0px;
   background: rgb(240, 144, 255);
 }
 
-body {
-  scrollbar-width: thin;
-  scrollbar-color: rgb(240, 144, 255) var(--color-grey-200);
-}
