@@ -81,8 +81,7 @@ onBeforeRouteUpdate(
                 <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"
                     :class="dropdownAbout ? 'bg-yellow-100' : ''" @click="toggleDropdownAbout" v-html="'About'" />
                 <button class="p-1 hover:bg-yellow-100 active:bg-yellow-100"
-                    :class="dropdownContact ? 'bg-yellow-100' : ''" @click="toggleDropdownContact"
-                    v-html="'Contact'" />
+                    :class="dropdownContact ? 'bg-yellow-100' : ''" @click="toggleDropdownContact" v-html="'Contact'" />
             </ul>
         </nav>
 
@@ -96,22 +95,25 @@ onBeforeRouteUpdate(
             </div>
         </ul>
 
-        <div class="about_description-container bg-orange-200 w-full min-h-fit md:max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
+        <div class="about_description-container bg-orange-200 w-full h-[70vh] md:min-h-fit md:max-h-80 typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownAbout">
             <PortableText :value="aboutDescription" />
         </div>
-        
+
         <div class="contact-container bg-orange-200 w-full h-fit typo--l p-1 pb-3 overflow-y-scroll overflow-x-hidden"
             v-if="dropdownContact">
             <ul>
                 <li class="contacts lowercase" v-for="contact in navigation.about.contacts">
-                    <a class="flex gap-x-6 items-baseline" v-if="contact.value.includes('@')"
+                    <a class="flex gap-x-2 md:gap-x-6 items-baseline" v-if="contact.value.includes('@')"
                         :href="`mailto:${contact.value}`" target="_blank">{{ contact.label }}
                         <span class="typo--m" v-html="contact.type" /></a>
 
-                    <a class="flex gap-x-6 items-baseline" v-else :href="contact.value" target="_blank">{{ contact.label
-                        }}
-                        <span class="typo--m" v-html="contact.type" /></a>
+                    <a class="flex gap-x-2 md:gap-x-6 items-baseline" v-else :href="contact.value" target="_blank">
+                        <div>
+                            {{ contact.label }}
+                        </div>
+                        <span class="typo--m" v-html="contact.type" />
+                    </a>
                 </li>
             </ul>
         </div>
