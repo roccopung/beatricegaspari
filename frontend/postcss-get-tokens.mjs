@@ -13,7 +13,7 @@ export default ({ path }) => {
 	const tokens = loadJSON(path)
 
 	if (!tokens) {
-		console.error("ERR: Tokens missing! postcss-get-tokens will not works")
+		console.error("ERR: Tokens missing! postcss-get-tokens will not work")
 		return {
 			postcssPlugin: "postcss-get-tokens",
 			prepare: () => ({
