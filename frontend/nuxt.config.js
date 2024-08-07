@@ -1,7 +1,52 @@
 export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en-gb",
+      },
+      meta: [
+        { charset: "UTF-8" },
+        { name: "robots", content: "index, follow" },
+        { name: "googlebot", content: "index, follow" },
+        {
+          name: "viewport",
+          content: "width=device-width, initial-scale=1, viewport-fit=cover",
+        },
+        {
+          name: "keywords",
+          content:
+            "illustration, pastel illustration, watercolor, editorial illustration, digital painting, analog illustration, ink painting, ink illustration, sketching, charcoal drawing, acrylic painting, gouache illustration, concept art, character design, landscape illustration, portrait illustration, abstract illustration, mixed media art, contemporary illustration, graphic illustration, surreal illustration, fantasy illustration, comic art, storyboard illustration, childrens book illustration",
+        },
+      ],
+      link: [
+        {
+          rel: "preload",
+          type: "font/woff",
+          href: "/fonts/ArialNarrow-Regular.woff",
+          as: "font",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          type: "font/woff",
+          href: "/fonts/Piscolabis-Regular.woff",
+          as: "font",
+          crossorigin: "",
+        },
+        {
+          rel: "preload",
+          type: "font/woff2",
+          href: "/fonts/Piscolabis-Regular.woff2",
+          as: "font",
+          crossorigin: "",
+        },
+      ],
+    },
+  },
   runtimeConfig: {
     public: {
-      baseUrl: process.env.NUXT_PUBLIC_BASE_URL || "https://beatricegaspari.vercel.app" || "http://localhost:3000",
+      baseUrl:
+        process.env.NUXT_PUBLIC_BASE_URL
     },
   },
   css: ["@/assets/css/index.css"],
@@ -37,15 +82,13 @@ export default defineNuxtConfig({
     dirs: ["./utils/**"],
   },
   watch: ["assets/css/tokens.json"],
-  generate: {
-    fallback: true,
-  },
   compatibilityDate: "2024-07-08",
   devtools: { enabled: false },
   site: {
-    url: 'https://beatricegaspari.com',
-    name: 'Beatrice Gaspari',
-    description: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
-    defaultLocale: 'en',
-  }
+    url: "https://beatricegaspari.com",
+    name: "Beatrice Gaspari",
+    description:
+      "Digital Portfolio of the Italian illustrator Beatrice Gaspari",
+    defaultLocale: "en",
+  },
 });

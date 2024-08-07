@@ -8,6 +8,12 @@ const navigation = ref(null);
 navigation.value = response.value;
 provide('navigation', navigation);
 
+useSeoMeta({
+	title: 'Beatrice Gaspari',
+	description: 'Digital Portfolio of the Italian illustrator Beatrice Gaspari',
+	ogImage: '~/images/favicon.png',
+})
+
 </script>
 
 <template>
